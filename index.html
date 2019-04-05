@@ -19,7 +19,7 @@
 <div class="modal-dialog modal-dialog-centered" role="document">
 <div class="modal-content">
 <div class="modal-header bg-dark text-light">
-  <h2 class="modal-title" id="exampleModalCenterTitle">Waxing(face) Services</h2>
+  <h2 class="modal-title" id="exampleModalCenterTitle">Contact Us</h2>
   <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -27,30 +27,26 @@
 <div class="modal-body text-left">
     <table class="table">
 <tbody>
-<tr>
-<td class="col">Chin</td>
-<td class="col"></td>
-<td class="col">$10</td>
-<td class="col"></td>
-</tr>
-<tr>
-<td class="col">Eyebrow</td>
-<td class="col"></td>
-<td class="col">$15</td>
-<td class="col"></td>
-</tr>
-<tr>
-<td class="col">Lip</td>
-<td class="col"></td>
-<td class="col">$10</td>
-<td class="col"></td>
-</tr>
-<tr>
-<td class="col">Full Face (Includes brows)</td>
-<td class="col"></td>
-<td class="col">$40</td>
-<td class="col"></td>
-</tr>
+    <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>   
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Your Role: <select name="role[]" multiple>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+          </select></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
 </tbody>
 </table>
 </div>

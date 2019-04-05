@@ -29,16 +29,10 @@
 <tbody>
     <form name="contact" method="POST" data-netlify="true">
         <p>
-          <label>Your Name: <input type="text" name="name" /></label>   
+          <label>Name: <input type="text" name="name" /></label>   
         </p>
         <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Your Role: <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label>
+          <label>Phone: <input type="text" name="phone" /></label>
         </p>
         <p>
           <label>Message: <textarea name="message"></textarea></label>
@@ -74,7 +68,7 @@
                 <p class="pb-4"> A beauty mainstay for Poppies is Nova Lash eyelash extensions.
 As a full service salon we tailor our services so our clients can achieve their own personal style.
  We offer free consultation services to each guest to help them discover their own unique look. </p>
- 				<a href="#" class="btn btn-primary btn-lg mb-4">Make An Appointment</a>
+ 				<a href="#" data-toggle="modal" data-target="#contact" class="btn btn-primary btn-lg mb-4">Make An Appointment</a>
                 <div>
                 	<a href="#"><img class="px-2" src="images/icon-fb.png" alt="fb" /></a>
                 	<a href="#"><img class="px-2" src="images/icon-insta.png" alt="fb" /></a>

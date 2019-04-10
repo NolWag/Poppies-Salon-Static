@@ -51,11 +51,11 @@
 
 
 <div class="header d-flex flex-column flex-md-row align-items-center p-3 px-md-4 position-fixed" style="width:100%; z-index:999;">
-  <div class="my-0 mr-md-auto"><img src="images/poppies-logo.jpg" width="150" /></div>
+  <div class="my-0 mr-md-auto"><a href="/"><img src="images/poppies-logo.jpg" width="150" /></a></div>
   <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark" href="#">About</a>
-    <a class="p-2 text-dark" href="#">Services</a>
-    <a class="p-2 text-dark" href="#">Staff</a>
+    <a class="p-2 text-dark" href="#about">About</a>
+    <a class="p-2 text-dark" href="#services">Services</a>
+    <a class="p-2 text-dark" href="#staff">Staff</a>
     <a class="p-2 text-dark" data-toggle="modal" data-target="#contact" href="#">Contact</a>
   </nav>
 </div>
@@ -63,7 +63,7 @@
 	<div class="container py-100">
     	<div class="row">
         	<div class="col-12 text-center">
-            	<img src="images/poppies-logo.jpg" alt="logo" class="banner-img" />
+            	  <img src="images/poppies-logo.jpg" alt="logo" class="banner-img" />
                 <h2 class="py-4 display-4">Lashery and Salon</h2>
                 <p class="pb-4"> A beauty mainstay for Poppies is Nova Lash eyelash extensions.
 As a full service salon we tailor our services so our clients can achieve their own personal style.
@@ -78,7 +78,7 @@ As a full service salon we tailor our services so our clients can achieve their 
     </div>
 </div>
 
-<div class="section-2 py-100">
+<div id="about" class="section-2 py-100">
 	<div class="container">
     	<div class="row">
         	<div class="col-12 text-center">
@@ -95,7 +95,7 @@ highest degree is the Poppies way.</p>
     </div>
 </div>
 
-<div class="section-3 py-100 text-light">
+<div id="services" class="section-3 py-100 text-light">
 	<div class="container">
     	<div class="row">
         	<div class="col-12 text-center">
@@ -595,7 +595,7 @@ to ensure the ultimate experience for our customers.</p>
     </div>
 </div>
 
-<div class="section-4 py-100 text-light">
+<div id="staff" class="section-4 py-100 text-light">
 	<div class="container">
     	<div class="row">
         	<div class="col-12 text-center">
@@ -755,5 +755,20 @@ I'll be going back to Lien for sure. The staff was super friendly too
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+let anchorlinks = document.querySelectorAll('a[href^="#"]')
+
+for (let item of anchorlinks) { // relitere 
+    item.addEventListener('click', (e)=> {
+        let hashval = item.getAttribute('href')
+        let target = document.querySelector(hashval)
+        target.scrollIntoView({
+            behavior: 'smooth'
+        })
+        history.pushState(null, null, hashval)
+        e.preventDefault()
+    })
+}
+</script>
 </body>
 </html>

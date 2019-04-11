@@ -100,3 +100,13 @@ body {
 		max-width: 100%;
 	}
 }
+
+.maps-section {
+	display: flex;
+}
+
+@media only screen and (max-width: 900px) {
+	.maps-section {
+		flex-direction: column;
+	}
+}

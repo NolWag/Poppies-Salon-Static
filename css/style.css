@@ -113,5 +113,9 @@ body {
 	.row {
 		margin-right: 0 !important;
 	}
+
+	.nav-item {
+		font-size: .8em;
+	}
 }
 
